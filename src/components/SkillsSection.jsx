@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SkillsSection = () => {
+  const [hoveredSkill, setHoveredSkill] = useState(null);
+
   const skills = [
     {
       category: 'Programming Languages',
@@ -42,7 +44,7 @@ const SkillsSection = () => {
           {skills.map((skillSet, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl border border-gray-200 p-6 hover:border-pink-500 hover:shadow-lg transition-all duration-300"
+              className="bg-white rounded-2xl border border-gray-200 p-6 hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 {skillSet.category}
@@ -51,7 +53,13 @@ const SkillsSection = () => {
                 {skillSet.items.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-sm font-medium border border-gray-200 hover:border-pink-500 hover:text-pink-500 transition-all"
+                    onMouseEnter={() => setHoveredSkill(skill)}
+                    onMouseLeave={() => setHoveredSkill(null)}
+                    className={`px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-sm font-medium border border-gray-200 transition-all duration-300 cursor-default ${
+                      hoveredSkill === skill 
+                        ? 'border-pink-500 text-pink-500 scale-110 shadow-md bg-pink-50' 
+                        : 'hover:border-pink-300'
+                    }`}
                   >
                     {skill}
                   </span>
