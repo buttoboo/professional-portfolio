@@ -5,6 +5,8 @@ import profilePic from '../assets/profile.jpg';
 const HeroSection = ({ scrollToSection }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [displayText, setDisplayText] = useState('');
+  const fullText = "Hi, I'm Yu Xuan";
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -13,6 +15,16 @@ const HeroSection = ({ scrollToSection }) => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
+  // Typing animation
+  useEffect(() => {
+    if (displayText.length < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(fullText.slice(0, displayText.length + 1));
+      }, 100);
+      return () => clearTimeout(timeout);
+    }
+  }, [displayText]);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
@@ -37,26 +49,29 @@ const HeroSection = ({ scrollToSection }) => {
       ></div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        {/* Interactive Profile Picture */}
+        {/* Profile Picture with sparkles and pulsing ring */}
         <div className="mb-8 relative">
           <div 
-            className="relative w-32 h-32 mx-auto mb-6 cursor-pointer group"
+            className="relative w-40 h-40 mx-auto mb-6 cursor-pointer"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
-            {/* Rotating border */}
-            <div className={`absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 transition-all duration-500 ${isHovering ? 'animate-spin-slow scale-110' : ''}`}></div>
+            {/* Single border */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500"></div>
+            
+            {/* Pulsing ring on hover */}
+            {isHovering && (
+              <div className="absolute inset-0 rounded-full border-4 border-pink-300 animate-ping-slow"></div>
+            )}
             
             {/* Image container */}
-            <div className="absolute inset-1 rounded-full bg-white p-1">
+            <div className="absolute inset-2 rounded-full bg-white p-1 shadow-2xl">
               <div className="w-full h-full rounded-full bg-gray-200 overflow-hidden relative">
-                {/* Replace this with your actual image */}
                 <img 
                   src={profilePic} 
                   alt="Yu Xuan" 
-                  className={`w-full h-full object-cover transition-transform duration-500 ${isHovering ? 'scale-110' : 'scale-100'}`}
+                  className="w-full h-full object-cover"
                   onError={(e) => {
-                    // Fallback if image doesn't load
                     e.target.style.display = 'none';
                     e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-pink-400 to-purple-400"><span class="text-white text-4xl font-bold">YX</span></div>';
                   }}
@@ -74,8 +89,9 @@ const HeroSection = ({ scrollToSection }) => {
           </div>
         </div>
         
+        {/* Typing animation title */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
-          Hi, I'm <span className="text-pink-500 inline-block hover:scale-110 transition-transform duration-300 cursor-default">Yu Xuan</span>
+          {displayText}<span className="animate-pulse text-pink-500">|</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-600 mb-4 animate-fade-in">
@@ -154,12 +170,12 @@ const HeroSection = ({ scrollToSection }) => {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-10px); }
         }
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+        @keyframes ping-slow {
+          0% { transform: scale(1); opacity: 1; }
+          100% { transform: scale(1.5); opacity: 0; }
         }
-        .animate-spin-slow {
-          animation: spin-slow 3s linear infinite;
+        .animate-ping-slow {
+          animation: ping-slow 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
         }
         .animation-delay-200 {
           animation-delay: 0.2s;
