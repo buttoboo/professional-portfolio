@@ -20,7 +20,7 @@ const EducationExperienceSection = () => (
             <div className="flex-1">
               <h3 className="text-xl font-bold text-gray-900 mb-1">Singapore Institute of Technology</h3>
               <p className="text-pink-500 font-medium mb-2">Bachelor of Engineering in ICT (Software Engineering)</p>
-              <p className="text-gray-600 text-sm mb-4">2023 - 2027 • GPA: 3.56</p>
+              <p className="text-gray-600 text-sm mb-4">2023 - 2027</p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-lg text-sm border border-gray-200">
                   Embedded Systems (A)

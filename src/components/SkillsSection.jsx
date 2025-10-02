@@ -6,27 +6,27 @@ const SkillsSection = () => {
   const skills = [
     {
       category: 'Programming Languages',
-      items: ['Python', 'Java', 'C++', 'JavaScript', 'PHP', 'Kotlin', 'SQL', 'C']
+      items: ['HTML', 'CSS', 'JavaScript', 'Python', 'C', 'Java', 'C++', 'C#', 'PHP', 'Kotlin', 'SQL']
     },
     {
-      category: 'Web Development',
-      items: ['HTML/CSS', 'React', 'MySQL', 'Backend Integration', 'REST APIs']
-    },
-    {
-      category: 'Mobile Development',
-      items: ['Android', 'Kotlin', 'Jetpack Compose', 'XML']
+      category: 'Frameworks & Libraries',
+      items: ['React', 'Angular', 'Vue', 'Django', 'Flask', 'ASP.NET Core', 'Bootstrap', 'Jetpack Compose', 'XML', 'MediaPipe']
     },
     {
       category: 'Tools & Platforms',
-      items: ['Git/GitHub', 'VS Code', 'IntelliJ', 'Android Studio', 'Docker']
+      items: ['Git/GitHub', 'Docker', 'AWS', 'Google Cloud', 'Azure', 'Firebase', 'VS Code', 'IntelliJ IDEA', 'Android Studio', 'Postman', 'Figma', 'Arduino']
     },
     {
-      category: 'Software Engineering',
-      items: ['SDLC', 'Design Patterns', 'MVC Architecture', 'Version Control', 'Agile']
+      category: 'Databases',
+      items: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQLite', 'MariaDB']
+    },
+    {
+      category: 'Concepts & Methodologies',
+      items: ['OOP', 'SOLID Principles', 'Design Patterns', 'Agile/Scrum', 'System Design', 'UML Design', 'Web Development', 'Mobile Development']
     },
     {
       category: 'Cloud & Data',
-      items: ['AWS/Azure Basics', 'CI/CD Pipeline', 'Machine Learning', 'Data Structures']
+      items: ['CI/CD Pipeline', 'AWS/Azure Basics', 'Data Structures & Algorithms', 'Machine Learning', 'Generative AI']
     },
   ];
 
