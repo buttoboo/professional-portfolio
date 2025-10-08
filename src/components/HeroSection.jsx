@@ -16,16 +16,6 @@ const HeroSection = ({ scrollToSection }) => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Typing animation
-  useEffect(() => {
-    if (displayText.length < fullText.length) {
-      const timeout = setTimeout(() => {
-        setDisplayText(fullText.slice(0, displayText.length + 1));
-      }, 100);
-      return () => clearTimeout(timeout);
-    }
-  }, [displayText]);
-
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
       {/* Floating elements that follow mouse */}
@@ -89,9 +79,8 @@ const HeroSection = ({ scrollToSection }) => {
           </div>
         </div>
         
-        {/* Typing animation title */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
-          {displayText}<span className="animate-pulse text-pink-500">|</span>
+          Hi, I'm <span className="text-pink-500">Yu Xuan</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-600 mb-4 animate-fade-in">
@@ -101,7 +90,6 @@ const HeroSection = ({ scrollToSection }) => {
         <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-12 animate-fade-in-delay">
           I build clean, functional applications with thoughtful and functional design.
           <br />
-          <span className="text-pink-500 font-medium">Available for internship May 2026 - April 2027</span>
         </p>
         
         <div className="flex flex-wrap justify-center gap-4 mb-20 animate-fade-in-delay-2">

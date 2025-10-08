@@ -103,7 +103,7 @@ const ProjectsSection = () => {
     {
         id: 5,
         title: 'Job Cupid',
-        tags: ['JavaScript', 'Python', 'Node.js', 'Machine Learning'],
+        tags: ['JavaScript', 'Python', 'Node.js', 'Machine Learning', 'Generative AI'],
         shortDesc: 'AI-driven job matching platform',
         fullDescription: 'An intelligent recruitment platform utilizing machine learning algorithms to connect job seekers with optimal employment opportunities. The system analyzes candidate profiles, skills, and experience to generate personalized job recommendations and streamline the application process.',
         features: [
@@ -112,12 +112,85 @@ const ProjectsSection = () => {
             'One-click application system with auto-filled candidate information',
             'AI-generated personalized cover letters tailored to specific job postings'
         ],
-        technologies: ['JavaScript', 'Python', 'Node.js', 'Machine Learning'],
+        technologies: ['JavaScript', 'Python', 'Node.js', 'Machine Learning', 'Generative AI'],
         images: [],
         github: null
     },
     {
-        id: 6,
+      id: 6,
+      title: 'Find-A-Home',
+      tags: ['Python', 'Streamlit', 'Folium', 'OneMap', 'Data Structures & Algorithms'],
+      shortDesc: 'Resale flat search and comparison platform',
+      fullDescription: 'Find-A-Home is a data-driven web application designed to streamline the search for resale flats in Singapore. It integrates map visualization, geolocation services, and efficient search and pathfinding algorithms to help users discover and compare housing options based on key criteria like price, location, and remaining lease.',
+      features: [
+          'Interactive map interface built with Folium to visualize flat locations and nearby amenities',
+          'Comprehensive search, filtering, sorting, and comparison tools for key housing attributes and pricing',
+          'Efficient search operations using Timsort and Binary Search for fast retrieval',
+          'Pathfinding using Dijkstra and A* algorithms for distance calculations'
+      ],
+      technologies: ['Python', 'Streamlit', 'Folium', 'OneMap', 'Data Structures & Algorithms'],
+      images: [
+        "/images/find-a-home/search.png",
+        "/images/find-a-home/comparison.png",
+        "/images/find-a-home/pathfinding-1.png",
+        "/images/find-a-home/pathfinding-2.png"
+      ],
+      github: null
+  },
+  {
+      id: 7,
+      title: 'Safe Access',
+      tags: ['Raspberry Pi', 'JavaScript', 'Python', 'Flask', 'Computer Networks', 'IoT'],
+      shortDesc: 'Smart home access and automation system',
+      fullDescription: 'SafeAccess is a smart home lock system designed to address traditional key security issues by integrating RFID authentication, real-time monitoring, and remote control of home appliances. Built using multiple Raspberry Pis, the system enables secure access control, logs visitor activity, and allows users to control door locks, lights, and fans through a centralized web dashboard.',
+      features: [
+          'RFID and keypad-based access control for secure door entry',
+          'Automatic logging of visits and real-time monitoring via a web dashboard',
+          'Integrated doorbell with camera that captures and displays images on the dashboard',
+          'Remote control of lights and fans through the dashboard interface',
+          'Multi-Raspberry Pi network architecture using TCP/IP for communication between components'
+      ],
+      contribution: [
+        'Integrated camera functionality to capture and display visitor images on the dashboard',
+        'Configured multi-Pi network communication over TCP/IP to ensure reliable data exchange between devices',
+        'Contributed to system design, network diagram, and security logic for access control'
+      ],
+      technologies: ['Raspberry Pi', 'JavaScript', 'Python', 'Flask', 'Computer Networks', 'IoT'],
+      images: [
+        "/images/safe-access/lights-and-fans.png",
+        "/images/safe-access/dashboard.png",
+        "/images/safe-access/door-1.png",
+        "/images/safe-access/door-2.png",
+        "/images/safe-access/smart-card.png",
+        "/images/safe-access/network-diagram.png"
+      ],
+      github: null
+    },
+    {
+      id: 8,
+      title: 'Space Adventure',
+      tags: ['Java', 'LibGDX', 'OOP', 'Design Patterns', 'Game Development', 'AI'],
+      shortDesc: 'Space-themed shooting game',
+      fullDescription: 'Space Adventure is a 2D educational game designed to engage children in learning about space through fun gameplay and interactive facts. Built using Java and LibGDX, the game is structured into a modular engine layer and a game layer. The engine layer provides reusable systems for rendering, input/output, collision detection, resource management, and AI. The game layer integrates these systems into an engaging space shooter with unique sprites, animations, and educational victory screens.',
+      features: [
+        'Modular engine architecture with separate engine and game layers for scalability and reusability',
+        'Custom rendering, collision detection, I/O, and AI managers to handle game logic and performance',
+        'Space-themed educational gameplay with fun facts shown after each stage to engage young players',
+        'Unique sprites, animations, and enemy behaviors including figure-8 movement patterns for dynamic gameplay',
+        'Integrated HUD for real-time display of player lives, scores, and stage information'
+      ],
+      technologies: ['Java', 'LibGDX', 'OOP', 'Design Patterns', 'Game Development', 'AI'],
+      images: [
+        "/images/space-adventure/start-screen.png",
+        "/images/space-adventure/game.png",
+        "/images/space-adventure/boss.png",
+        "/images/space-adventure/victory-screen.png",
+        "/images/space-adventure/uml-diagram.png",
+      ],
+      github: null
+    },
+    {
+        id: 9,
         title: 'Crumbly',
         tags: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'Docker'],
         shortDesc: 'E-commerce platform for local bakery',
