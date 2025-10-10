@@ -59,7 +59,6 @@ const ProjectsSection = () => {
         "/images/fitform/running.png"
       ],
       github: null
-      // https://www.youtube.com/watch?v=eCU7RBLy3bw
     },
     {
       id: 3,
@@ -75,7 +74,13 @@ const ProjectsSection = () => {
         'Custom recipe creation with nutritional calculation and ingredient management'
       ],
       technologies: ['JavaScript', 'MySQL', 'MariaDB', 'MongoDB'],
-      images: [],
+      images: [
+        "/images/recipe-planner/register.png",
+        "/images/recipe-planner/recipes.png",
+        "/images/recipe-planner/filter-recipes.png",
+        "/images/recipe-planner/admin-dashboard.png",
+        "/images/recipe-planner/edit-recipe.png",
+      ],
       github: null
     },
     {
@@ -97,7 +102,12 @@ const ProjectsSection = () => {
             'Integrated RESTful APIs using Sequelize ORM for database operations'
         ],
         technologies: ['JavaScript', 'React', 'Node.js', 'Sequelize', 'Amazon S3', 'Telegram Bot'],
-        images: [],
+        images: [
+          "/images/palmlink/login.png",
+          "/images/palmlink/dashboard.png",
+          "/images/palmlink/profile.png",
+          "/images/palmlink/chat.png"
+        ],
         github: null
     },
     {
@@ -113,7 +123,12 @@ const ProjectsSection = () => {
             'AI-generated personalized cover letters tailored to specific job postings'
         ],
         technologies: ['JavaScript', 'Python', 'Node.js', 'Machine Learning', 'Generative AI'],
-        images: [],
+        images: [
+          "/images/job-cupid/homepage.png",
+          "/images/job-cupid/extract-info.png",
+          "/images/job-cupid/jobs.png",
+          "/images/job-cupid/cover-letter.png"
+        ],
         github: null
     },
     {
@@ -185,7 +200,7 @@ const ProjectsSection = () => {
         "/images/space-adventure/game.png",
         "/images/space-adventure/boss.png",
         "/images/space-adventure/victory-screen.png",
-        "/images/space-adventure/uml-diagram.png",
+        "/images/space-adventure/uml-diagram.png"
       ],
       github: null
     },
@@ -207,7 +222,12 @@ const ProjectsSection = () => {
           'Implemented admin panel complete with CRUD operations for product and order management'
         ],
         technologies: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'Docker'],
-        images: [],
+        images: [
+          "/images/crumbly/order-management.png",
+          "/images/crumbly/product-management.png",
+          "/images/crumbly/add-product.png",
+          "/images/crumbly/products.png"
+        ],
         github: null
     }
   ];
@@ -294,11 +314,11 @@ const ProjectsSection = () => {
 
             <div className="p-6">
               {selectedProject.images.length > 0 ? (
-                <div className="relative w-full h-96 bg-gray-100 rounded-2xl mb-6 overflow-hidden group">
+                <div className="relative w-full h-96 bg-white rounded-2xl mb-6 overflow-hidden group border border-gray-200">
                   <img 
                     src={selectedProject.images[currentImageIndex]}
                     alt={selectedProject.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                   
                   {selectedProject.images.length > 1 && (
