@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Github } from 'lucide-react';
+import { Download, Linkedin, Github } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -10,7 +10,7 @@ const ContactSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-6">
             Let's Work Together
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
             I'm actively seeking internship opportunities to apply my skills and grow as a developer.
           </p>
           <p className="text-pink-500 font-semibold mt-4">
@@ -21,11 +21,12 @@ const ContactSection = () => {
         <div className="flex flex-wrap justify-center gap-4">
           
           <a
-            href="mailto:nicoleleeyuxuan@gmail.com"
-            className="flex items-center gap-2 px-8 py-4 bg-pink-500 text-white rounded-lg font-medium hover:bg-pink-600 transition-all"
+            href="/Lee Yu Xuan Resume.pdf"
+            download="Lee Yu Xuan Resume.pdf"
+            className="flex items-center gap-2 px-8 py-4 bg-pink-500 text-white rounded-lg font-medium hover:bg-pink-600 transition-all hover:scale-105 hover:shadow-lg"
           >
-            <Mail size={20} />
-            <span>Send Email</span>
+            <Download size={20} />
+            <span>Download Resume</span>
           </a>
           <a
             href="https://www.linkedin.com/in/lee-yu-xuan/"
