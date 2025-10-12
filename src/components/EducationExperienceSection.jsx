@@ -48,6 +48,9 @@ const EducationExperienceSection = () => (
                     Machine Learning (B+)
                   </span>
                   <span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-lg text-sm border border-gray-200">
+                    Web Systems (B+)
+                  </span>
+                  <span className="px-3 py-1 bg-gray-50 text-gray-700 rounded-lg text-sm border border-gray-200">
                     Mobile App Development (B+)
                   </span>
                 </div>
